@@ -14,7 +14,7 @@ const io = socketio(server, {
     credentials: true
   },
   cookie: {
-    sameSite: 'None'
+    sameSite: 'none'
   }
 });
 
