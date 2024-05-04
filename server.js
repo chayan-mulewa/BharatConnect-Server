@@ -11,11 +11,9 @@ const server = app.listen(PORT_NUMBER, () => {
 const io = socketio(server, {
   cors: {
     origin: true,
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Authorization', 'Content-Type', 'Set-Cookie']
   },
-  cookie: {
-    sameSite: 'none'
-  }
 });
 
 io.on('connect', async (socket) => {
