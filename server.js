@@ -12,6 +12,9 @@ const io = socketio(server, {
   cors: {
     origin: true,
     credentials: true
+  },
+  cookie: {
+    sameSite: 'None'
   }
 });
 
