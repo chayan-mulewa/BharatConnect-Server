@@ -11,7 +11,6 @@ const server = app.listen(PORT_NUMBER, () => {
 const io = socketio(server, {
   cors: {
     origin: true,
-    methods: ["GET", "POST"],
     credentials: true
   }
 });
