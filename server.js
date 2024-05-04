@@ -12,6 +12,7 @@ const io = socketio(server, {
   cors: {
     origin: true,
     credentials: true,
+    withCredentials: true,
     allowedHeaders: ['Authorization', 'Content-Type', 'Set-Cookie']
   },
 });
