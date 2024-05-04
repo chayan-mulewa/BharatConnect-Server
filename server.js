@@ -17,7 +17,7 @@ const io = socketio(server, {
 
 io.on('connect', async (socket) => {
 
-  console.log(socket.handshake.headers.cookie);
+  console.log(socket.handshake.headers);
 
   // const userId = await GetUserIdFromSocket(socket);
   // const user = await GetUserDetailsFromUserId(userId);
