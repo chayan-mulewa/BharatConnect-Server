@@ -12,7 +12,7 @@ connectDB(Database.url);
 
 app.use(
     cors({
-        origin: true,
+        origin: ['https://bharat-connect-client.vercel.app', 'http://localhost:5173'],
         allowedHeaders: ['app-token'],
         credentials: true
     })

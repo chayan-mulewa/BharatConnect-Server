@@ -10,7 +10,7 @@ const server = app.listen(PORT_NUMBER, () => {
 
 const io = socketio(server, {
   cors: {
-    origin: true,
+    origin: ['https://bharat-connect-client.vercel.app', 'http://localhost:5173'],
     allowedHeaders: ['app-token'],
     credentials: true
   }
