@@ -11,14 +11,14 @@ const server = app.listen(PORT_NUMBER, () => {
 const io = socketio(server, {
   cors: {
     origin: ['https://bharat-connect-client.vercel.app', 'http://localhost:5173'],
-    allowedHeaders: ['app-token'],
+    allowedHeaders: ['token'],
     credentials: true
   }
 });
 
 io.on('connect', async (socket) => {
 
-  const customHeaderValue = socket.handshake.headers['app-token'];
+  const customHeaderValue = socket.handshake.headers['token'];
   console.log("Value of app-token:", customHeaderValue);
 
   // const userId = await GetUserIdFromSocket(socket);
