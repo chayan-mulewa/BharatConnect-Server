@@ -10,16 +10,14 @@ const server = app.listen(PORT_NUMBER, () => {
 
 const io = socketio(server, {
   cors: {
-    origin: true,
-    credentials: true,
-    withCredentials: true,
-    allowedHeaders: ['Authorization', 'Content-Type', 'Set-Cookie']
-  },
+    origin: 'https://bharat-connect-client.vercel.app',
+    credentials: true
+  }
 });
 
 io.on('connect', async (socket) => {
 
-  console.log(socket.handshake.headers);
+  console.log(socket.handshake.headers.cookie);
 
   // const userId = await GetUserIdFromSocket(socket);
   // const user = await GetUserDetailsFromUserId(userId);
